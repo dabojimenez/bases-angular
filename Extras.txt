@@ -1,0 +1,2 @@
+// Para no trabajar con modulos
+ng new <nombre_proyecto> --no-standalone
