@@ -1,2 +1,9 @@
 // Para no trabajar con modulos
 ng new <nombre_proyecto> --no-standalone
+
+Angular.json
+Archivo donde configuramos para la ejecucion de neustra aplicacion
+
+
+Comando para construir la aplicacion
+comando: ng build
