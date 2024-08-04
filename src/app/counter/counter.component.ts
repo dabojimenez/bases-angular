@@ -1,9 +1,25 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-counter', // se aconseja colcoar un prefijo, en este caso es app
-  template: '<h1>Hola mundo contador</h1>'
-})
-export class CounterComponent {
+  selector: 'app-counter',
+  template: `
+  <h3>{{ counter }}</h3>
 
+<button (click)="increasBy(1)">+1</button>
+<button (click)="increasBy(-1)">-1</button>
+<button (click)="reset()">Reset</button>
+  `
+})
+
+export class CounterComponent {
+  public counter: number = 10;
+  constructor() { }
+
+  increasBy(value: number): void {
+    this.counter += value;
+  }
+
+  reset(): void {
+    this.counter = 10;
+  }
 }
