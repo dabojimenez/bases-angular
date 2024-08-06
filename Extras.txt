@@ -14,3 +14,6 @@ ng g c <path/nombreComponente>
 ejemplo:
   ng g c heroes/hero
   // creame un componete dentro d ela caprte[heroes] y que se llame [hero]
+
+
+// En agular, EVITAR el uso de two way databinding
