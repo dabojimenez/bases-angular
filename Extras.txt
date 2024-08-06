@@ -7,3 +7,10 @@ Archivo donde configuramos para la ejecucion de neustra aplicacion
 
 Comando para construir la aplicacion
 comando: ng build
+
+// Generar unc ompnente des CLI
+ng g component <path/nombreComponente>
+ng g c <path/nombreComponente>
+ejemplo:
+  ng g c heroes/hero
+  // creame un componete dentro d ela caprte[heroes] y que se llame [hero]
