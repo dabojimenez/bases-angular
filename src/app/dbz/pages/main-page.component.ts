@@ -20,9 +20,12 @@ export class MainPageComponent {
     }];
 
   onNewCharacter(character: Character): void {
-    console.log('mainpage');
+    this.characters.push(character);
+  }
 
-    console.log({character});
-
+  onDeleteId(index: number): void {
+    // el uno que le pasamos, apra indicar un elemento
+    // documentacion: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+    this.characters.splice(index, 1);
   }
 }

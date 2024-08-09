@@ -18,6 +18,7 @@ export class AddCharacterComponent {
   };
 
   emitCharacter(): void {
+    // debugger;
     console.log(this.character);
 
     // validmaos si tiene nombre
@@ -27,7 +28,6 @@ export class AddCharacterComponent {
     this.onNewCharacter.emit({ ...this.character });
 
     // limpiamos los valores
-    this.character.name = '';
-    this.character.power = 0;
+    this.character = { name: '', power: 0 }
   }
 }

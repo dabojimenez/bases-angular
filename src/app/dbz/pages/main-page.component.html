@@ -4,7 +4,9 @@
 <div class="row">
   <div class="col">
     <!-- Listado de personajes -->
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list
+      [characterList]="characters"
+      (onDeleteIdEmit)="onDeleteId($event)"></dbz-list>
   </div>
 
   <div class="col">
