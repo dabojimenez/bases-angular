@@ -8,6 +8,7 @@
   </div>
 
   <div class="col">
-    <dbz-add-character></dbz-add-character>
+    <!-- escuchamos, cuando se emite un nuevo character y poderlo recibir debemos usar si o si la palabra reservada [$event] -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -7,6 +7,11 @@ import { Character } from '../../interfaces/character.interface';
   styleUrl: './add-character.component.css'
 })
 export class AddCharacterComponent {
+
+  // emisor de eventos, apra poder emitr al padre, ademas agregandole el decorador @Output
+  @Output()
+  onNewCharacter: EventEmitter<Character> = new EventEmitter();
+
   public character: Character = {
     name: '',
     power: 0
@@ -15,5 +20,14 @@ export class AddCharacterComponent {
   emitCharacter(): void {
     console.log(this.character);
 
+    // validmaos si tiene nombre
+    if (this.character.name.length === 0) return;
+
+    // emitimos el valor o el character, al padre
+    this.onNewCharacter.emit({ ...this.character });
+
+    // limpiamos los valores
+    this.character.name = '';
+    this.character.power = 0;
   }
 }
