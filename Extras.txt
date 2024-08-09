@@ -17,3 +17,7 @@ ejemplo:
 
 
 // En agular, EVITAR el uso de two way databinding
+
+(click) = usamos paranetes apra indicar un evento
+[class] = usamos corchetes para asociar un atributo
+[(ngModel)]="character.name" = asociamso un evento y un atributo al mismo tiempo (two-way-data-binding)
